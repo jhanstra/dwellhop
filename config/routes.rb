@@ -1,7 +1,5 @@
 Dwellhop::Application.routes.draw do
-  
-  get "users/new"
-
+  resources :users
   root  'static#home'
   match '/signup',  to: 'users#new',      via: 'get'
   match '/help',    to: 'static#help',    via: 'get'

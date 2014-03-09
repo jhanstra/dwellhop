@@ -1,9 +1,44 @@
 @import "foundation";
 
+
 p,h1,h2,h3,h4,h5,h6,img,div,a {
-	margin:10px;
 	text-align: center;
 }
 #centered {
 	text-align:center;
+}
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+.left-container {
+	width:25%;
+
+}
+
+/* forms */
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.alert {
+	background-color: #a61a00;
+	color:#fff;
+	height:40px;
+	padding:10px;
+	font-size:20px;
 }
