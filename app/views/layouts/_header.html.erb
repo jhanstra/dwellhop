@@ -2,20 +2,26 @@
 <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">Dwellhop</a></h1>
+      <h1><%= link_to "Dwellhop", root_path %></h1>
     </li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    
   </ul>
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#">Create Property</a></li>
+
+      <li class="active"><%= link_to "Create Property", signin_path %></li>
     </ul>
 
     <!-- Left Nav Section -->
     <ul class="left">
-      <li><a href="#">Jared Hanstra</a></li>
+      <% if signed_in? %>
+        <li class="name"><%= link_to "Profile", current_user %></li>
+        <li class="name"><%= link_to "Sign out", signout_path, method: "delete" %></li>
+      <% else %>
+        <li class="name"><%= link_to "Sign in", signin_path %></li>
+      <% end %>
     </ul>
   </section>
 </nav>
