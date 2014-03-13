@@ -7,6 +7,28 @@ p,h1,h2,h3,h4,h5,h6,img,div,a {
 #centered {
 	text-align:center;
 }
+.page-container {
+  padding-top:30px;
+}
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+
+
+
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

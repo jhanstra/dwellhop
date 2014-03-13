@@ -18,6 +18,7 @@
     <ul class="left">
       <% if signed_in? %>
         <li class="name"><%= link_to "Profile", current_user %></li>
+        <li class="name"><%= link_to "Settings", edit_user_path(current_user)%></li>
         <li class="name"><%= link_to "Sign out", signout_path, method: "delete" %></li>
       <% else %>
         <li class="name"><%= link_to "Sign in", signin_path %></li>
