@@ -1,0 +1,6 @@
+<div class="home-header">
+<%= image_tag("miguels.jpg", :alt => "photo", class:"hero-photo") %>
+<h1 class="hero-address"><%= @home.address %></h1>
+<p class="hero-description"><%= @home.description %></p>
+<p>Owned by <%= @home.user.name %></p>
+</div>

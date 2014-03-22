@@ -1,0 +1,18 @@
+<li>
+	<h2 class="home-address"><%= home.address %></h2>
+  <span class="home-description"><%= home.description %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(home.created_at) %> ago.
+  </span>
+  <p><%= home.address %></p>
+  <p><%= home.city %></p>
+  <p><%= home.zip_code %></p>
+  <p><%= home.user_id %></p>
+  <p><%= home.list_price %></p>
+	<%= link_to "delete", home, method: :delete,
+	                                     data: { confirm: "Are you sure?" },
+	                                     title: home.address %>
+
+
+
+</li>

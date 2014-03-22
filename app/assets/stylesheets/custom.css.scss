@@ -2,13 +2,17 @@
 
 
 p,h1,h2,h3,h4,h5,h6,img,div,a {
-	text-align: center;
+	margin:0;
+  padding:0;
 }
-#centered {
+ul {
+  list-style-type: none;
+}
+.centered {
 	text-align:center;
 }
 .page-container {
-  padding-top:30px;
+
 }
 /* Users index */
 
@@ -24,8 +28,88 @@ p,h1,h2,h3,h4,h5,h6,img,div,a {
     }
   }
 }
+.left-container {
+  position: fixed;
+  top:45px;
+  width:25%;
+  display: inline-block;
+  background-color: #ddd;
+  color:#fff;
+  height:2000px;
+}
+.right-container {
+  position: relative;
+  top:45px;
+  width:75%;
+  display: inline-block;
+  vertical-align: top;
+  background:u;
+  float:right;
+}
+.left-container h1 {
+  padding:20px 5% 3px;
+  font-size: 1.8em;
+  font-family: 'Merriweather';
+  text-align: center;
+  font-weight: 100;
+}
+.left-container h3 {
+  padding:0;
+  font-size: 1em;
+  font-family: 'Merriweather';
+  text-align: center;
+  font-weight: 400;
+}
+.right-container h3 {
+  font-size:2em;
+  font-family: 'Merriweather';
+  text-align: left;
+  font-weight: 400;
+  margin-bottom:20px;
+  padding-left: 30px;
+}
+.hero-photo {
+  width:100%;
+  opacity:0.3;
+  box-shadow:0px 0px 5px inset #fff;
 
-
+}
+.hero-address {
+  position: relative;
+  top:-800px;
+  text-align: center;
+  color:#333;
+  font-family: 'Helvetica';
+  font-weight:100;
+  font-size: 6em;
+}
+.nav-test {
+  position: fixed;
+  z-index:5;
+}
+.homes {
+}
+.homes li {
+  padding: 20px;
+  margin-right: 20px;
+  border-top: 1px solid #e8e8e8;
+  color:#222;
+  font-family: 'Lusitana';
+  font-size: 1.1em;
+}
+.timestamp {
+  color:#aaa;
+}
+.page-container {
+  position: relative;
+  top:45px;
+}
+textarea {
+  height: 200px;
+}
+.home-address {
+  font-family: 'Raleway';
+}
 
 
 
@@ -41,16 +125,16 @@ p,h1,h2,h3,h4,h5,h6,img,div,a {
   float: left;
   width: 100%;
   margin-top: 45px;
+  padding:20px;
+  text-align: center;
   @include box_sizing;
 }
-.left-container {
-	width:25%;
 
-}
 
 /* forms */
 #error_explanation {
   color: #f00;
+  text-align: center;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
@@ -58,9 +142,14 @@ p,h1,h2,h3,h4,h5,h6,img,div,a {
 }
 
 .alert {
-	background-color: #a61a00;
+  width:75%;
+  left:25%;
+  position:relative;
+	background-color: #62e200;
 	color:#fff;
 	height:40px;
 	padding:10px;
 	font-size:20px;
+  text-align: center;
+
 }

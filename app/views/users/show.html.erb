@@ -1,9 +1,16 @@
 <div class="left-container">
 	<div class="photo-container">
-		<%= image_tag("jared-hammock.jpg", :alt => "photo") %>
+		<%= image_tag("jared-hammock.jpg", :alt => "photo", class:"user-photo") %>
 	<% provide(:title, @user.name) %>
 	<h1><%= @user.name %></h1>
 	<h3><%= @user.email %></h3>
+	</div>
 </div>
 <div class="right-container">
+	<% if @user.homes.any? %>
+      <h3>My Properties (<%= @user.homes.count %>)</h3>
+      <ul class="homes">
+      	<%= render @homes %>
+      </ul>
+    <% end %>
 </div>
