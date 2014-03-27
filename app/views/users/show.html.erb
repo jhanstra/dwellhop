@@ -4,6 +4,9 @@
 	<% provide(:title, @user.name) %>
 	<h1><%= @user.name %></h1>
 	<h3><%= @user.email %></h3>
+	<div class='centered'>
+		<%= link_to("Update Profile", edit_user_path(current_user), class:"button medium my-button radius") %>
+	</div>
 	</div>
 </div>
 <div class="right-container">

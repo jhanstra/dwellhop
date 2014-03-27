@@ -1,9 +1,28 @@
 @import "foundation";
 
+body {
+    background-image: -webkit-gradient(
+  linear,
+  right top,
+  left bottom,
+  color-stop(0, #0078A0),
+  color-stop(1, #54B2FF)
+);
+background-image: -o-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -moz-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -webkit-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -ms-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: linear-gradient(to left bottom, #0078A0 0%, #54B2FF 100%);
+    color:#fff;
+}
 
-p,h1,h2,h3,h4,h5,h6,img,div,a {
+p,h1,h2,h3,h4,h5,h6,img,div,a,label {
 	margin:0;
   padding:0;
+  color:#fff;
+}
+a:hover {
+  color:#ddd;
 }
 ul {
   list-style-type: none;
@@ -11,9 +30,8 @@ ul {
 .centered {
 	text-align:center;
 }
-.page-container {
 
-}
+
 /* Users index */
 
 .users {
@@ -28,22 +46,38 @@ ul {
     }
   }
 }
+
+
+
+/* GENERAL STYLES */
+
+
 .left-container {
   position: fixed;
   top:45px;
   width:25%;
   display: inline-block;
-  background-color: #ddd;
+ background-image: -webkit-gradient(
+  linear,
+  right top,
+  left bottom,
+  color-stop(0, #0078A0),
+  color-stop(1, #54B2FF)
+);
+background-image: -o-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -moz-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -webkit-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -ms-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: linear-gradient(to left bottom, #0078A0 0%, #54B2FF 100%);
   color:#fff;
   height:2000px;
 }
 .right-container {
   position: relative;
-  top:45px;
   width:75%;
   display: inline-block;
   vertical-align: top;
-  background:u;
+  background:#fff;
   float:right;
 }
 .left-container h1 {
@@ -52,6 +86,7 @@ ul {
   font-family: 'Merriweather';
   text-align: center;
   font-weight: 100;
+  color: #fff;
 }
 .left-container h3 {
   padding:0;
@@ -59,39 +94,207 @@ ul {
   font-family: 'Merriweather';
   text-align: center;
   font-weight: 400;
+  color: #fff;
+}
+.right-container h2, .right-container p, .right-container a {
+  color:#222;
 }
 .right-container h3 {
   font-size:2em;
   font-family: 'Merriweather';
   text-align: left;
   font-weight: 400;
+  margin-top:30px;
   margin-bottom:20px;
   padding-left: 30px;
+  color: #222;
 }
+.top-header {
+  font-family: 'Merriweather';
+  font-size: 2.3em;
+  padding-top:50px;
+  margin-bottom:30px;
+}
+.my-button {
+  background:none;
+  border:1px solid #fff;
+  margin-top:20px;
+  width:70%;
+}
+.my-button:hover {
+  background-color: #fff;
+  color:#0078a0;
+}
+.nav {
+  position: fixed;
+  z-index:5;
+}
+
+
+
+
+
+
+
+
+
+/* SHOW HOME */
+
+.home-header {
+  background-image: image-url('578.png');
+  background-size: 100%;
+  background-position: fixed;
+  background-color:#222;
+  height:800px;
+}
+
 .hero-photo {
   width:100%;
   opacity:0.3;
   box-shadow:0px 0px 5px inset #fff;
-
+}
+.show-home-div {
+  width:100%;
+  padding-top:50px;
+  background-color:#379EDE;
 }
 .hero-address {
   position: relative;
-  top:-800px;
   text-align: center;
-  color:#333;
-  font-family: 'Helvetica';
+  color:#fff;
+  font-family: 'Merriweather';
   font-weight:100;
-  font-size: 6em;
+  font-size: 5em;
+  padding-top:300px;
 }
-.nav-test {
-  position: fixed;
-  z-index:5;
+.hero-description {
+  position: relative;
+  font-size: 1.4em;
+  font-family: 'Merriweather';
+  width:70%;
+  left:15%;
+  text-align: center;
 }
+.overview-left {
+  position: relative;
+  width:40%;
+  left:6%;
+  margin-top:50px;
+  display: inline-block;
+}
+.overview-image {
+  width:90%;
+  position: relative;
+  left:5%;
+  border-radius:6px;
+}
+.overview-right {
+  position: relative;
+  width:50%;
+  left:9%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top:50px;
+}
+.description-text {
+  font-size: 1.3em;
+  font-family: 'Merriweather';
+  line-height: 2em;
+}
+.description-subheader {
+  font-size: 2.3em;
+  font-family: 'Merriweather';
+  margin-bottom:10px;
+}
+.show-home-div-title {
+  font-size: 3em;
+  font-family: 'Merriweather';
+  margin-bottom:20px;
+}
+.title-hr {
+  margin-bottom:40px;
+  width:30%;
+  position: relative;
+  left:35%;
+}
+.div-hr {
+  position: relative;
+  width:50%;
+  left:25%;
+  margin-bottom:30px;
+}
+.youtube {
+  position: relative;
+  left:15%;
+  width:70%;
+  height:700px;
+  border:none;
+}
+.photos-container {
+  left:3%;
+  position: relative;
+  width:94%;
+  height:800px;
+  
+}
+.photos-list-div {
+  width:18%;
+  height:800px;
+  background-color: #222;
+  display: inline-block;
+  padding:0px;
+  border:none;
+  overflow:scroll;
+}
+.photos-list {
+  width:100%;
+  heigh:auto;
+}
+.photos-right-div {
+  width:82%;
+  height:800px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left:-4px;
+}
+.photos-primary-container {
+  height:680px;
+  overflow:hidden;
+}
+.photos-primary-caption {
+  height:120px;
+  width:auto;
+  background:#222;
+  padding:18px 0px 10px 20px;
+  font-family: 'Merriweather';
+}
+.photos-primary-caption h2 {
+  font-family: 'Merriweather';
+}
+.photos-primary {
+  width:100%;
+  overflow: hidden;
+}
+.home-map {
+  position: relative;
+  left:40%;
+  width:50%;
+  height:500px;
+}
+
+
+
+/* SHOW USER */
+
+
+
+
 .homes {
+  color:#222;
 }
-.homes li {
-  padding: 20px;
+.homes .home-div {
   margin-right: 20px;
+  padding:10px 0px;
   border-top: 1px solid #e8e8e8;
   color:#222;
   font-family: 'Lusitana';
@@ -108,8 +311,141 @@ textarea {
   height: 200px;
 }
 .home-address {
-  font-family: 'Raleway';
+  font-family: 'Merriweather';
+  color:#222;
+  font-size:2em;
+  float:left;
 }
+.home-description {
+  color:#222;
+}
+.user-photo {
+  width:80%;
+  position: relative;
+  left:10%;
+  margin-top:20px;
+  border:4px solid #ccc;
+}
+.home-image-div {
+  width:30%;
+  padding:20px 0px 0px;
+  display: inline-block;
+}
+.home-info-div {
+  width:69%;
+  display: inline-block;
+  margin:0;
+  padding:0;
+  vertical-align: top;
+}
+.home-image {
+  width:90%;
+  position: relative;
+  left:5%;
+}
+.home-buttons a {
+  float:right;
+  color:#fff;
+  margin-right:10px;
+  margin-top: 4px;
+}
+.home-specs {
+  display: block;
+}
+.home-add {
+  display: block;
+  width:100%;
+  height:50px;
+}
+
+
+
+
+
+/* HOME PAGE CUSTOMIZATIONS */
+
+.home-page-container {
+  width: 100%;
+  height:900px;
+  background-image: -webkit-gradient(
+  linear,
+  right top,
+  left bottom,
+  color-stop(0, #0078A0),
+  color-stop(1, #54B2FF)
+);
+background-image: -o-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -moz-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -webkit-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: -ms-linear-gradient(left bottom, #0078A0 0%, #54B2FF 100%);
+background-image: linear-gradient(to left bottom, #0078A0 0%, #54B2FF 100%);
+  color:#fff;
+}
+.home-page-container h1 {
+  color:#fff;
+  font-size: 4em;
+  position: relative;
+  padding-top:30px;
+  padding-bottom: 0px;
+  font-family:'Merriweather';
+}
+.home-page-container h3 {
+  color:#fff;
+  font-size: 1.5em;
+  font-family:'Merriweather';
+}
+.home-page-signup {
+  margin:50px auto 150px;
+  background:none;
+  border:1px solid #fff;
+}
+.home-page-signup:hover {
+  background-color: #fff;
+  color:#0078a0;
+}
+.home-page-div {
+  height:800px;
+  background: #fff;
+  overflow: hidden;
+}
+.home-page-div h2 {
+  color:#222;
+  margin:60px auto 10px;
+  font-family: 'Merriweather';
+}
+.home-page-div p {
+  color:#222;
+  font-size: 1.2em;
+  font-family: 'Merriweather';
+  padding-bottom:30px;
+}
+#div1 {
+  background-color:#eee;
+  color:#222;
+}
+#div2 {
+  background-color: #00b060;
+  background-size:100%;
+}
+#div3 {
+}
+.home-page-logo {
+  width:20%;
+  left:40%;
+  position: relative;
+  margin-top:100px;
+}
+.screenshot {
+  position: relative;
+  width:74%;
+  left:13%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  opacity:0.9;
+}
+
+
+
 
 
 
@@ -141,7 +477,7 @@ textarea {
   }
 }
 
-.alert {
+.alert-div {
   width:75%;
   left:25%;
   position:relative;

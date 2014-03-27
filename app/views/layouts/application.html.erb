@@ -8,13 +8,14 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,100|Merriweather:400,300|Lusitana|Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<%= render 'layouts/header' %>
+  <%= render 'layouts/homeheader' if ((params[:controller] == 'homes') and (params[:action] == 'show')) %>
+	<%= render 'layouts/header' if ((params[:controller] != 'homes') or (params[:action] != 'show')) %>
 	<div class="page-container">
 		<% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
+        <div class="alert-div alert-<%= key %>"><%= value %></div>
       <% end %>
 	  <%= yield %>
-	  <%= debug(params) if Rails.env.development? %>
+	  <!--<%= debug(params) if Rails.env.development? %>-->
 	</div>
 </body>
 </html>

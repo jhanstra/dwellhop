@@ -1,0 +1,33 @@
+<div class="contain-to-grid sticky nav" data-options="sticky_on: large">
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to @home.address  %></h1>
+    </li>
+    
+  </ul>
+
+  <section class="top-bar-section">
+  	<!-- Left Nav Section -->
+    <ul class="left">
+      <% if signed_in? %>
+        <li class="name"><%= link_to "Overview", home_path(anchor:"overview") %></li>
+        <li class="name"><%= link_to "Photos", home_path(anchor:"photos") %></li>
+        <li class="name"><%= link_to "Video Tour", home_path(anchor:"video") %></li>
+        <li class="name"><%= link_to "Details", home_path(anchor:"details") %></li>
+        <li class="name"><%= link_to "Neighborhood", home_path(anchor:"neighborhood") %></li>
+      <% end %>
+    </ul>
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <% if signed_in? %>
+        <li class="active"><%= link_to "Schedule a Showing", home_path(anchor:"schedule") %></li>
+      <% else %>
+        <li class="name"><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+    </ul>
+
+    
+  </section>
+</nav>
+</div>
