@@ -10,6 +10,9 @@
 	</div>
 </div>
 <div class="right-container">
+	<% flash.each do |key, value| %>
+        <div class="alert-div alert-<%= key %>"><%= value %></div>
+    <% end %>
 	<% if @user.homes.any? %>
       <h3>My Properties (<%= @user.homes.count %>)</h3>
       <ul class="homes">

@@ -13,7 +13,7 @@ class HomesController < ApplicationController
     @home = current_user.homes.build(home_params)
 		if @home.save
 			flash[:success] = "Property successfully created"
-      redirect_to current_user
+      redirect_to edit_home_path(@home.id)
     else
       render 'new'
     end
@@ -24,9 +24,17 @@ class HomesController < ApplicationController
 	end
 
 	def edit
+		@home = Home.find(params[:id])
 	end
 
 	def update
+		@home = Home.find(params[:id])
+		if @home.update_attributes(home_params)
+      flash[:success] = "Listing updated"
+      redirect_to edit_home_path(@home.id)
+    else
+      render 'edit'
+    end
 	end
 
 	def destroy
@@ -37,7 +45,8 @@ class HomesController < ApplicationController
 
 	private
 		def home_params
-      params.require(:home).permit(:address,:city,:state,:description,:zip_code,:list_price)
+      params.require(:home).permit(:address,:city,:state,:description,:zip_code,:list_price,:summary,
+      	:summary_header,:youtube_url)
     end
 
     def correct_user

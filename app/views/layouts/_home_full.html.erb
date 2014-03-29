@@ -1,0 +1,83 @@
+<% flash.each do |key, value| %>
+        <div class="alert-div alert-<%= key %>"><%= value %></div>
+    <% end %>
+<div class="home-header">
+	<h1 class="hero-address"><%= @home.address %></h1>
+	<p class="hero-description centered"><%= @home.description %></p>
+</div>
+<div class="show-home-div" id="overview" name="overview">
+	<div class="overview-left">
+		<h3 class="description-subheader"><%= @home.summary_header %></h3>
+		<p class="description-text"><%= @home.summary %></p>
+	</div>
+	<div class="overview-right">
+		<%= image_tag('578-inside.jpg', class:"overview-image") %>
+	</div>
+</div>
+<div class="show-home-div" id="photos" name="photos">
+	<hr class="div-hr">
+	<h2 class="centered show-home-div-title">Photos</h2>
+	<div class="photos-container">
+		<div class="photos-list-div">
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+			<%= image_tag('miguels.jpg',class:"photos-list") %>
+
+
+		</div>
+		<div class="photos-right-div">
+			<div class="photos-primary-container">
+				<%= image_tag('578-inside.jpg',class:"photos-primary") %>
+			</div>
+			<div class="photos-primary-caption">
+				<h2>Photo 1</h2>
+				<p>This photo was taken by Jared Hanstra.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="show-home-div" id="video" name="video">
+	<hr class="div-hr">
+	<h2 class="centered show-home-div-title">Video Tour</h2>
+	<iframe class="youtube" src="//www.youtube.com/embed/<%= youtube_embed(@home.youtube_url) %>?html5=1&showinfo=0&loop=1&d=1" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="show-home-div" id="details" name="details">
+	<hr class="div-hr">
+	<h2 class="centered show-home-div-title">Details</h2>
+	<p><%= @home.list_price %></p>
+</div>
+<div class="show-home-div" id="neighborhood" name="neighborhood">
+	<hr class="div-hr">
+	<h2 class="centered show-home-div-title">Welcome to the Neighborhood</h2>
+	<div class="neighborhood-left">
+		<h3>In the Area</h3>
+		<ul>
+			<li>Madison Park ~ 1 min</li>
+			<li>Downtown Madison ~ 8 min</li>
+			<li>Botanical Gardens ~ 3 min</li>
+			<li>Jefferson Zoo ~ 5 min</li>
+			<li>Copps Supermarket ~ 2 min</li>
+			<li>Highway 18 ~ 1 min</li>
+			<li>Milwaukee ~ 1 hr</li>
+		</ul>
+	</div>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.898865690504!2d-89.528409!3d42.98040399999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807b05f7653237f%3A0x93d181541c250ef0!2s578+S+Hillcrest+Dr!5e0!3m2!1sen!2sus!4v1395712716585" class="home-map" frameborder="0" style="border:0"></iframe>
+</div>
+<div class="show-home-div" id="schedule" name="schedule">
+	<hr class="div-hr">
+	<h2 class="centered show-home-div-title">Schedule a Showing</h2>
+	<div class="schedule-left">
+		<%= image_tag('jared-hammock.jpg', class:'schedule-image') %>
+		<p>Your realtor: <%= current_user.name %></h3>
+	</div>
+	<div class="schedule-right">
+		
+	</div>
+</div>
+

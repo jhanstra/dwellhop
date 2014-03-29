@@ -4,7 +4,7 @@
   </div>
   <div class="home-info-div">
   	<div class="home-add"><h2 class="home-address"><%= home.address %></h2>
-      <div class="home-buttons"><%= link_to "Delete", home, method: :delete, data: { confirm: "Are you sure you want to delete this listing?" }, title: home.address, class:'button tiny radius alert' %><%= link_to "Show Home", home, class:'button tiny radius' %>
+      <div class="home-buttons"><%= link_to "Delete", home, method: :delete, data: { confirm: "Are you sure you want to delete this listing?" }, title: home.address, class:'button tiny radius alert' %><%= link_to "Update Home", edit_home_path(home.id), class:'button tiny radius' %><%= link_to "Show Home", home, class:'button tiny radius' %>
       </div>
     </div>
     <div class="home-specs">

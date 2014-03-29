@@ -6,6 +6,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.text :description
       t.string :photo_type
 
+
       t.timestamps
     end
   end

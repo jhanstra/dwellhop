@@ -1,0 +1,43 @@
+
+<div class="edit-left-container scrollable">
+	<h1 class="centered">Update Listing</h1>
+	<%= form_for(@home) do |f| %>
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+
+      <!--<%= f.label :state %>
+      <%= f.text_field :state %>-->
+
+      <%= f.label :zip_code %>
+      <%= f.text_field :zip_code %>
+
+      <%= f.label :list_price %>
+      <%= f.text_field :list_price %>
+
+      <%= f.label 'Short Memorable Description' %>
+      <%= f.text_area :description, class:'description-form' %>
+  
+      <%= f.label :summary_header %>
+      <%= f.text_field :summary_header %>
+
+      <%= f.label :summary %>
+      <%= f.text_area :summary %>
+
+      <%= f.label 'Youtube Link' %>
+      <%= f.text_field :youtube_url %>
+
+
+
+      
+
+
+        <%= f.submit 'Save changes', class: "button small radius my-button" %>
+
+   <% end %>
+</div>
+<div class="edit-right-container">
+<%= render 'layouts/home_full' %>
+</div>
