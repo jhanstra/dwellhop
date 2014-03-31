@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="large-6 large-offset-3 centered">
-    <%= form_for(@user) do |f| %>
+    <%= form_for @user do |f| %>
       <%= render 'shared/error_messages' %>
 
 
@@ -17,6 +17,9 @@
 
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
+
+      <%= f.label 'Upload a profile photo' %>
+      <%= f.file_field :avatar %>
 
       <%= f.submit yield(:buttontext), class: "button small my-button radius" %>
     <% end %>

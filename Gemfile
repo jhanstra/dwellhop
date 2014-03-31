@@ -21,6 +21,7 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'addressable'
+gem "paperclip", "~> 4.1"
 
 
 group :development do

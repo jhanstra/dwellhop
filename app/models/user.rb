@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	include Paperclip::Glue
 	has_many :homes, dependent: :destroy
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
@@ -10,6 +11,9 @@ class User < ActiveRecord::Base
                           if: lambda { |m| m.password.present? }
 	has_secure_password
 	validates :password, length: { minimum: 6 }
+	
+	has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 	def User.new_remember_token
     SecureRandom.urlsafe_base64

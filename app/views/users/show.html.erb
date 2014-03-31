@@ -1,7 +1,6 @@
 <div class="left-container">
 	<div class="photo-container">
-		<%= image_tag("jared-hammock.jpg", :alt => "photo", class:"user-photo") %>
-	<% provide(:title, @user.name) %>
+		<%= image_tag @user.avatar.url, class:'user-photo' %>	<% provide(:title, @user.name) %>
 	<h1><%= @user.name %></h1>
 	<h3><%= @user.email %></h3>
 	<div class='centered'>
