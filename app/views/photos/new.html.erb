@@ -1,0 +1,19 @@
+<h1 class="centered top-header">Upload a photo</h1>
+
+<div class="row">
+  <div class="large-6 large-offset-3 centered">
+    <%= form_for [@home,@photo], :html => { multipart:true } do |f| %>
+
+      <%= f.label 'Upload a photo' %>
+      <%= f.file_field :image %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit yield(:buttontext), class: "button small my-button radius" %>
+    <% end %>
+  </div>
+</div>

@@ -45,8 +45,8 @@ class HomesController < ApplicationController
 
 	private
 		def home_params
-      params.require(:home).permit(:address,:city,:state,:description,:zip_code,:list_price,:summary,
-      	:summary_header,:youtube_url)
+      params.require(:home).permit(:address,:city,:state,:description,:zip_code,:list_price,:list_date,
+      	:summary,:summary_header,:youtube_url)
     end
 
     def correct_user

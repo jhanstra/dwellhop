@@ -16,7 +16,10 @@
           <%= f.text_field :zip_code %>
 
           <%= f.label :list_price %>
-          <%= f.text_field :list_price %>      
+          <%= f.text_field :list_price %>  
+
+          <%= f.label 'Submit image' %>
+          <%= f.file_field :image %>    
 
 
         <%= f.submit yield(:buttontext), class: "button small my-button radius" %>

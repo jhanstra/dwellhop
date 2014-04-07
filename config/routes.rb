@@ -1,6 +1,12 @@
 Dwellhop::Application.routes.draw do
+  get "static_pages/about"
+  get "static_pages/home"
+  get "static_pages/help"
   resources :users
-  resources :homes
+  resources :homes do
+    resources :photos
+  end
+
   resources :sessions, only: [:new, :create, :destroy]
   root  'static#home'
   match '/signup',  to: 'users#new',      via: 'get'

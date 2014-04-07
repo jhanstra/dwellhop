@@ -73,8 +73,8 @@
 	<hr class="div-hr">
 	<h2 class="centered show-home-div-title">Schedule a Showing</h2>
 	<div class="schedule-left">
-		<%= image_tag('jared-hammock.jpg', class:'schedule-image') %>
-		<p>Your realtor: <%= current_user.name %></h3>
+		<%= image_tag @home.user.avatar.url, class:'schedule-image' %>
+		<p>Your realtor: <%= @home.user.name %></h3>
 	</div>
 	<div class="schedule-right">
 		
