@@ -17,7 +17,7 @@ body {
     */
   background-color:#2a95d0;
 
-    } 
+    }
 
 
 p,h1,h2,h3,h4,h5,h6,img,div,a,label {
@@ -238,7 +238,7 @@ ul {
   height:800px;
   border-radius:6px;
   overflow:hidden;
-  
+
 }
 .photos-list-div {
   width:18%;
@@ -251,7 +251,7 @@ ul {
 }
 .photos-list {
   width:100%;
-  heigh:auto;
+  height:auto;
 }
 .photos-right-div {
   width:82%;
@@ -438,6 +438,10 @@ textarea {
 
 
 /* HOME PAGE CUSTOMIZATIONS */
+
+div.white h2, div.white p {
+  color:#fff;
+}
 
 .home-page-container {
   width: 100%;
